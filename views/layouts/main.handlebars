@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>pundit</title>
+
+        <link rel="stylesheet" href="{{style}}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    </head>
+
+    <body>
+        <div id="header">
+        <header class="main-header">
+            <nav class="nav">
+               <!-- <a href="/">
+                    <div class="logo-image">
+                        <img src="images/pundit.png" class="class-fluid">
+                    </div>
+                </a>
+                -->
+                <span id="logo-text"><h1>pundit</h1></span> 
+                <ul>
+                    <li><a href="/">ANASAYFA</a></li>
+                    {{#if displayLink}}
+                    <li><a href="/add-post">YAZI YAYINLA</a></li>
+                    {{/if}}
+                    {{#unless displayLink}}
+                    <li><a href="/sign-page">GİRİŞ YAP/KAYIT OL</a></li>
+                    {{/unless}}
+                    {{#if displayLink}}
+                    <li><a href="/logout">ÇIKIŞ YAP</a></li>
+                    {{/if}}
+                </ul>
+            </nav>
+        </header>
+        </div>
+
+        {{{ body }}}
+        
+        <footer class="footer">
+            <h3 class="footer-logo">pundit</h3>
+            <ul>
+                <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-github"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-spotify"></i></a></li>
+            </ul>
+        </footer>
+
+       
+    </body>
+</html>

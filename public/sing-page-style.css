@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;/*bunun sayesinde elementleri boyutlandırırlken belirttiğimiz boyuta paddingi de dahil ediyoruz*/
+    font-family: Roboto;
+}
+
+html, body{/*burada header'ı renklendirmemize rağmen çevresinde kalan boşlukları kaldırdık*/
+    margin: 0;
+    padding: 0;
+    background-color: #eab676;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.clearfix::after{
+    content:'';
+    display: block;
+    clear: both;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+.nav ul{/*burada nav sınıfının içerisindeki ul'leri kastediyoruz*/
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: inline-block;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+*/
+
+.nav li {
+    display: inline;
+}
+
+.nav a {
+    padding: .5em;
+    color: black;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+
+
+#logo-text h1 {
+    margin: 0;
+    font-size: xx-large;
+    display: inline-block;
+}
+
+
+.logo-image{
+    background-color: #76aaea;
+    width: 100px;
+    height: 55px;
+}
+
+.main-header{
+    background-color: #76aaea;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+
+.article-photo img{
+    width: 150px;
+    height: 100px;
+}
+
+.container{
+    width: 400px;
+    max-width: 400px;
+    margin: 1rem;
+    padding: 2rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    background-color: #76ea7c;
+}
+
+.form-hidden{
+    display: none;
+}
+
+.form > *:first-child{
+    margin-top: 0;
+}
+
+.form > *:last-child{
+    margin-bottom: 0;
+}
+
+.form-title{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form-message{
+    text-align: center;
+    margin-bottom: 1rem;
+
+}
+
+.form-message-succes{
+    color: #000000;
+}
+
+.form-message-error{
+    color: rgb(190, 11, 11);
+}
+
+.form-input-group{
+    margin-bottom: 1rem;
+}
+
+.form-input{
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #dddddd;
+    outline: none;
+    background: #eeeeee;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.form-input:focus{
+    border-color: #000000;
+    background: #ffffff;
+}
+
+.form-input-error{
+    color: rgb(190, 11, 11);
+    border-color: rgb(190, 11, 11);
+}
+
+.form-input-error-message{
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: rgb(190, 11, 11);
+}
+
+.form-btn{
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 40px;
+    color: black;
+    outline: none;
+    cursor: pointer;
+    background: #76aaea;
+    border: 1px solid black;
+}
+
+.form-btn:hover{
+    background: rgba(0, 0, 0, 0);
+    transition: all 0.7s ease 0s;
+}
+
+.form-btn:active{
+    transform: scale(0.70);
+}
+
+.form-text{
+    text-align: center;
+}
+
+.form-link{
+    color: black;
+    cursor: pointer;
+}
+
+.form-link:hover{
+    text-decoration: underline;
+}
+
+.footer{
+    background-color: #76aaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.footer-logo{
+    margin: 0;
+    font-size: 2.5em;
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.footer li{
+    display: inline;
+}
+
+.footer a {
+    padding-right: .5em;
+    color: black;
+}
+
+.footer i {
+    font-size: 40px;
+}
+

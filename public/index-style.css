@@ -1,0 +1,357 @@
+/*bir elemntin boyutunu belirtirken % (yüzde) kullanırsak bu ekranın genişliğine veya uzunluğuna oranla demektir
+  em ise genelde fontlarda ve fontlarla alakalı elementleri boyutlandırırken kullanılır*/
+
+/*inleine elementlere verilen padding sadece yanlardan verilir elementin displayini inline-block yaparsak
+  tıpkı bir blok eleman gibi padding margin border vs. verebiliriz*/  
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;/*bunun sayesinde elementleri boyutlandırırlken belirttiğimiz boyuta paddingi de dahil ediyoruz*/
+    font-family: Roboto;
+}
+
+html, body{/*burada header'ı renklendirmemize rağmen çevresinde kalan boşlukları kaldırdık*/
+    margin: 0;
+    padding: 0;
+    background-color: #eab676;
+}
+
+.clearfix::after{
+    content:'';
+    display: block;
+    clear: both;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+.nav ul{/*burada nav sınıfının içerisindeki ul'leri kastediyoruz*/
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: inline-block;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+*/
+
+.nav li {
+    display: inline;
+}
+
+.nav a {
+    padding: .5em;
+    color: black;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+
+
+#logo-text h1 {
+    margin: 0;
+    font-size: xx-large;
+    display: inline-block;
+}
+
+
+.logo-image{
+    background-color: #76aaea;
+    width: 100px;
+    height: 55px;
+}
+
+.main-header{
+    background-color: #76aaea;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+
+
+.article-photo img{
+    width: 150px;
+    height: 100px;
+}
+
+.banner{
+    width: 100%;
+    display: flex;
+    background-color: #76ea7c;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid black;
+}
+
+.banner a{
+    margin-right: 20px;
+    margin-left: 20px; 
+    padding: 0;
+    display: inline;
+    color: white;
+    text-decoration: none;
+    font-size: x-large;
+    border: 15px solid black;
+    background-color: black;
+    border-radius: 99em;
+}
+
+.banner a:hover{
+    background-color: #76ea7c;
+    border: 15px solid #76ea7c;
+    color: black;
+    transition: all 0.7s ease 0s;
+}
+
+.slogan{
+    color: black;
+    font-size:3.5em;
+    padding-top: 0;
+    padding-left: 20px;
+    margin: 0;
+    display: inline;
+}
+.slogan-sentence{
+    font-size: 2em;
+    padding-left: 20px;
+    margin: 0;
+    display: inline; 
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-top: 50px;
+    width: 800px;
+    
+}
+
+.card{
+    background-color: #deea76;
+    width: 800px;
+    height: 200px;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    border-radius: 15px;
+}
+
+.card:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 1s ease;
+}
+
+.card-image{
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+    float: right;
+    border-radius: 0 15px 15px 0;
+}
+
+.img-1{
+    background-image: url(https://picsum.photos/400/200);
+
+}
+
+.img-2{
+    background-image: url(https://picsum.photos/400/200);
+}
+
+.img-3{
+    background-image: url(https://picsum.photos/400/200);
+}
+
+.img-4{
+    background-image: url(https://picsum.photos/400/200);
+}
+
+.img-5{
+    background-image: url(https://picsum.photos/400/200);
+}
+
+.title{
+    margin: 5px;
+    margin-top: 25px;
+    padding: 0;
+}
+
+.subtitle{
+    padding: 0;
+    margin: 36px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    margin-top: 0;
+    font-size: 1.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.categories a{
+    background-color: #eab676;
+    color: black;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 2em;
+}
+
+.categories a:hover{
+    
+    background-color:gainsboro;
+    transition: all 0.7s ease 0s;
+}
+
+.read-btn{
+    float: right;
+    margin-right: 25px;
+    margin-top: 15px;
+}
+
+.read-btn a{
+    background-color: black;
+    color: white;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 2em;
+}
+
+/* .footer{
+    background-color: #76aaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.footer-logo{
+    margin: 0;
+    font-size: 2.5em;
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.footer li{
+    display: inline;
+}
+
+.footer a {
+    padding-right: .5em;
+    color: black;
+}
+
+.footer i {
+    font-size: 40px;
+} */
+
+.footer{
+    background-color: #76aaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.footer-logo{
+    margin: 0;
+    font-size: 2.5em;
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.footer li{
+    display: inline;
+}
+
+.footer a {
+    padding-right: .5em;
+    color: black;
+}
+
+.footer i {
+    font-size: 40px;
+}
+
+
+.right-sidebar{
+    
+    background-color: #deea76;
+    float: right;
+    width: 240px;
+    height: 500px;
+    margin-top: 50px;
+    margin-right: 90px;
+    margin-top: 250px;
+    margin-bottom: 150px;
+    border-radius: 2em;
+}
+
+.sidebar-categories h2{
+    padding-left: 20px;
+}
+
+.sidebar-categories ul{
+    padding-bottom:10px ;
+    border-bottom: 1px solid black;
+}
+
+.sidebar-categories li{
+    margin-top: 5px;
+}
+
+.sidebar-categories a{
+    color: black;
+    font-size: x-large;
+}
+
+.sidebar-categories a:hover{
+    text-decoration: underline;
+}
+
+.popular-writers h2{
+    padding-left: 20px;
+    
+}
+
+.popular-writers ul{
+    padding-bottom:10px ;
+    
+}
+
+.popular-writers a{
+    color: black;
+    font-size: x-large;
+}
+
+.popular-writers a:hover{
+    text-decoration: underline;
+}

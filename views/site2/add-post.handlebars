@@ -1,0 +1,30 @@
+<div class="container">
+  <form action="/add-post" method="POST">
+
+    <label for="author">İsim Soyisim</label>
+    <input type="text" id="author" name="author" placeholder="İsminiz Soyisminiz...">
+
+    <label for="title">Başlık</label>
+    <input type="text" id="title" name="title" placeholder="Başlık..">
+
+
+    <label for="content">İçerik</label>
+    <textarea id="content" name="content" placeholder="Yazınız..." style="height:200px"></textarea>
+
+    {{!-- <p>Dosya yüklemek için "Dosya Seç" butonuna tıklayın</p>
+
+    
+    <input type="file" id="myFile" name="filename"> --}}
+        
+    
+
+    <br>
+    <br>
+
+    <input type="submit" value="Submit">
+
+    
+
+  </form>
+</div>
+<script src="/add-post-script.js"></script>

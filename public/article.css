@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;/*bunun sayesinde elementleri boyutlandırırlken belirttiğimiz boyuta paddingi de dahil ediyoruz*/
+    font-family: Roboto;
+}
+
+html, body{/*burada header'ı renklendirmemize rağmen çevresinde kalan boşlukları kaldırdık*/
+    margin: 0;
+    padding: 0;
+    background-color: #a18057;
+}
+
+/*body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}*/
+
+.clearfix::after{
+    content:'';
+    display: block;
+    clear: both;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+.nav ul{/*burada nav sınıfının içerisindeki ul'leri kastediyoruz*/
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: inline-block;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+*/
+
+.nav li {
+    display: inline;
+}
+
+.nav a {
+    padding: .5em;
+    color: black;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+
+
+#logo-text h1 {
+    margin: 0;
+    font-size: xx-large;
+    display: inline-block;
+}
+
+
+.logo-image{
+    background-color: #76aaea;
+    width: 100px;
+    height: 55px;
+}
+
+.main-header{
+    background-color: #76aaea;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+
+
+
+.container{
+    margin-top: 48px;
+    margin-bottom: 72px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.popular-tags{
+    width: 15%;
+    height:max-content;
+    background-color: #deea76;
+    margin-left: 50px;
+    margin-top: 25px;
+    border-radius: 30px;
+}
+
+.popular-tags h2{
+    padding-left: 20px;
+}
+
+.popular-tags ul{
+    padding-bottom:10px ;
+}
+
+.popular-tags li{
+    margin-top: 5px;
+}
+
+.popular-tags a{
+    color: black;
+    font-size: x-large;
+}
+
+.popular-tags a:hover{
+    text-decoration: underline;
+}
+
+.article{
+    width: 60%;
+    height: max-content;
+    background-color: #eab676;
+    /* display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    border: 1px solid black;
+    margin-top: 50px;
+    margin-bottom: 50px; */
+    padding-left: 25px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+.title h2{
+    font-size: xx-large;
+    font-weight: bold;
+}
+.article img {
+    width: 700px;
+    height: 500px;
+    aspect-ratio: 700/500;
+    border-radius: 20px;
+    
+}
+
+.article-date-owner{
+    margin-top: 10px;
+    font-size: 1em;
+    text-decoration: underline;
+}
+
+.article-text p{
+    font-size: 1.5em;
+}
+
+.owner-info{
+    width: 15%;
+    height: 400px;
+    background-color: #deea76;
+    margin-right: 50px;
+    margin-top: 25px;
+    border-radius: 30px;
+}
+
+.owner-photo{
+    background-size: cover;
+    width: 100%;
+    height: 50%;
+    border-radius: 30px 30px 0 0;
+}
+
+.owner-name{
+    text-align: center;
+}
+
+.owner-bio{
+    text-align: center;
+}
+
+.all-articles-btn{
+    text-align: center;
+    margin-top: 40px;
+    
+}
+
+.all-articles-btn a{
+    background-color: black;
+    color: white;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 2em;
+}
+
+.all-articles-btn a:hover{
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all 0.7s ease 0s;
+}
+
+.img{
+    background-image: url(/images/profile-pic.jpg);
+}
+
+.footer{
+    background-color: #76aaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.footer-logo{
+    margin: 0;
+    font-size: 2.5em;
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.footer li{
+    display: inline;
+}
+
+.footer a {
+    padding-right: .5em;
+    color: black;
+}
+
+.footer i {
+    font-size: 40px;
+}
+
